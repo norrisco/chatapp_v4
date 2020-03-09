@@ -22,13 +22,19 @@
         <div  class="message_input_wrapper">
         <input  id="message" class="message_input"  placeholder="type a message..." />
         <input  id="username" class="username_input" placeholder="username" />
+        <select id="rooms" name="rooms">
+            <option value="rm1">Room 1</option>
+            <option value="rm2">Room 2</option>
+            <option value="rm3">Room 3</option>
+            <option value="rm4">Room 4</option>
+          </select>
         </div>
         <button  class="send_message">Send</button>
     </form>
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-<script  src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script  src="https://cdn.jsdelivr.net/gh/rexeze/formatTimeStamp/src/index.min.js"></script>
 
 <script  src="chat.js"></script>
