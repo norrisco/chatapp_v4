@@ -27,14 +27,14 @@ socket.on("connection", socket => {
   });
 
   socket.on("newMessage", (msg) => {
-    console.log(`${msg.sender} says: ${msg.message}`);
+    console.log(`${msg.sender} says(${msg.room}): ${msg.message}`);
     socket.broadcast.emit("received", msg);
 
     //save chat to DB
     connect.then(db => {
       
       //new document
-      let chatMessage = new Chat({ message: msg.message, sender: msg.sender });
+      let chatMessage = new Chat({ message: msg.message, sender: msg.sender, room: msg.room });
       chatMessage.save();
       //console.log("- message saved to database");
     });

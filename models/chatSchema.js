@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const chatSchema = new Schema(
   {
     message: { type: {} },
-    sender: { type: String }
+    sender: { type: String },
+    room: { type: String }
   },
   {
     timestamps: true

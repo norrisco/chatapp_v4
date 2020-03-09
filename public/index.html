@@ -1,7 +1,7 @@
 <!doctype  html>
 <html>
     <head>
-        <title>Anonymouse Real-time chat</title>
+        <title>Chat App</title>
         <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"  rel="stylesheet"  id="bootstrap-css">
         <link  href="./styles.css"  type="text/css"  rel="stylesheet"/>
     </head>
@@ -17,19 +17,29 @@
 </div>
     <ul id="messages"  class="messages"></ul>
 <div  class="bottom_wrapper clearfix">
-<i  id="typing"></i>
-    <form  id="form">
+<i id="typing"></i>
+    <!-- <form action="/room2">
+        <button type="menu">Room1</button>
+    </form></br> -->
+    <!-- <button><a href="room2.html">Room2</a></button> -->
+
+    <form id="form">
         <div  class="message_input_wrapper">
-        <input  id="message" class="message_input"  placeholder="type a message..." />
-        <input  id="username" class="username_input" placeholder="username" />
+        <input  id="message" class="message_input"  placeholder="type a message..." /></br>
+
+        <label>Username: </label>
+        <input  id="username" class="username_input" value="Anonymous" />
+
+        <label>Rooms: </label>
         <select id="rooms" name="rooms">
             <option value="rm1">Room 1</option>
             <option value="rm2">Room 2</option>
             <option value="rm3">Room 3</option>
             <option value="rm4">Room 4</option>
           </select>
+
         </div>
-        <button  class="send_message">Send</button>
+        <button class="send_message">Send</button>
     </form>
 </div>
 </div>

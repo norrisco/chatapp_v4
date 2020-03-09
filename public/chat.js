@@ -7,14 +7,13 @@ const socket = io();
 
     var msg = {
         message: $("#message").val(),
-        sender: $("#username").val()
+        sender: $("#username").val(),
+        room: $("#rooms").val()
     }
     
     //Emit newMessage
     socket.emit("newMessage", msg);
-    // socket.emit("msgSender", msg.sender);
 
-    
     messages.appendChild(li).append($("#message").val());
     let span = document.createElement("span");
     messages.appendChild(span).append(`by ${msg.sender} just now`);
