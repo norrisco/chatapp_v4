@@ -10,7 +10,7 @@ const connect = require("./dbConnection");
 const Chat = require("./models/chatSchema");
 const chatRouter  = require("./routes/chatRoute");
 
-//bodyparser middleware
+//bodyparser middleware - attaches data to request object
 app.use(bodyParser.json());
 
 //routes
